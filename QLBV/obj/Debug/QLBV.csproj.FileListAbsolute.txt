@@ -1,0 +1,11 @@
+D:\ATBMDL\PhanHe2\QLBV\QLBV\bin\Debug\QLBV.exe.config
+D:\ATBMDL\PhanHe2\QLBV\QLBV\bin\Debug\QLBV.exe
+D:\ATBMDL\PhanHe2\QLBV\QLBV\bin\Debug\QLBV.pdb
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.AssemblyReference.cache
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.SuggestedBindingRedirects.cache
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.DangNhap.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.Properties.Resources.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.GenerateResource.cache
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.CoreCompileInputs.cache
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.exe
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.pdb
