@@ -9,3 +9,5 @@ D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.GenerateResource.cache
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.CoreCompileInputs.cache
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.exe
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.pdb
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.BN_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.BN_TTCN.resources

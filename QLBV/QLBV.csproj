@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BN_TTCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN_TTCN.Designer.cs">
+      <DependentUpon>BN_TTCN.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="BN_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BN_Main.Designer.cs">
+      <DependentUpon>BN_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BN_TTCN.resx">
+      <DependentUpon>BN_TTCN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BN_Main.resx">
+      <DependentUpon>BN_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

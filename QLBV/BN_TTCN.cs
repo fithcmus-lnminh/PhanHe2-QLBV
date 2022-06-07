@@ -10,19 +10,23 @@ using System.Windows.Forms;
 
 namespace QLBV
 {
-    public partial class DangNhap : Form
+    public partial class BN_TTCN : Form
     {
-        public DangNhap()
+        public BN_TTCN()
         {
             InitializeComponent();
         }
 
-        private void Button_Login_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            BN_Main bn = new BN_Main();
-            this.Hide();
-            bn.ShowDialog();
-            this.Show();
+            BN_Main bnmain = new BN_Main();
+            Hide();
+            bnmain.ShowDialog();
+        }
+
+        private void btnSuaTTCN_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

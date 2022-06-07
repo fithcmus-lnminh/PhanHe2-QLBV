@@ -71,6 +71,7 @@
             this.Button_Login.TabIndex = 13;
             this.Button_Login.Text = "Đăng nhập";
             this.Button_Login.UseVisualStyleBackColor = false;
+            this.Button_Login.Click += new System.EventHandler(this.Button_Login_Click);
             // 
             // label2
             // 
