@@ -19,10 +19,16 @@ namespace QLBV
 
         private void Button_Login_Click(object sender, EventArgs e)
         {
-            BN_Main bn = new BN_Main();
-            this.Hide();
+            CSYT_Main bn = new CSYT_Main();
+            //BN_Main bn = new BN_Main();
+            Hide();
             bn.ShowDialog();
-            this.Show();
+            Show();
+        }
+
+        private void DangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

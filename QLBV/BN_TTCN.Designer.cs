@@ -39,14 +39,13 @@
             this.txtTinhTP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtQH = new System.Windows.Forms.TextBox();
-            this.txtTD = new System.Windows.Forms.TextBox();
-            this.txtSN = new System.Windows.Forms.TextBox();
-            this.txtBN = new System.Windows.Forms.TextBox();
+            this.txtTenDuong = new System.Windows.Forms.TextBox();
+            this.txtSoNha = new System.Windows.Forms.TextBox();
+            this.txtTenBN = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtCSYT = new System.Windows.Forms.TextBox();
-            this.btnSuaTTCN = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,6 +54,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnSuaTTCN = new System.Windows.Forms.Button();
+            this.btnHuySuaTTCN = new System.Windows.Forms.Button();
+            this.btnSuaTTCNAcp = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,11 +83,11 @@
             this.panel2.Controls.Add(this.txtTinhTP);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dtpNgay);
+            this.panel2.Controls.Add(this.dtpNgaySinh);
             this.panel2.Controls.Add(this.txtQH);
-            this.panel2.Controls.Add(this.txtTD);
-            this.panel2.Controls.Add(this.txtSN);
-            this.panel2.Controls.Add(this.txtBN);
+            this.panel2.Controls.Add(this.txtTenDuong);
+            this.panel2.Controls.Add(this.txtSoNha);
+            this.panel2.Controls.Add(this.txtTenBN);
             this.panel2.Controls.Add(this.txtCMND);
             this.panel2.Controls.Add(this.txtCSYT);
             this.panel2.Controls.Add(this.label10);
@@ -99,7 +101,7 @@
             this.panel2.Location = new System.Drawing.Point(22, 91);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1016, 398);
+            this.panel2.Size = new System.Drawing.Size(1016, 406);
             this.panel2.TabIndex = 23;
             // 
             // lblMaBN
@@ -115,6 +117,7 @@
             this.txtTSBGD.Location = new System.Drawing.Point(692, 339);
             this.txtTSBGD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTSBGD.Name = "txtTSBGD";
+            this.txtTSBGD.ReadOnly = true;
             this.txtTSBGD.Size = new System.Drawing.Size(283, 26);
             this.txtTSBGD.TabIndex = 26;
             // 
@@ -123,6 +126,7 @@
             this.txtDiUngThuoc.Location = new System.Drawing.Point(663, 213);
             this.txtDiUngThuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiUngThuoc.Name = "txtDiUngThuoc";
+            this.txtDiUngThuoc.ReadOnly = true;
             this.txtDiUngThuoc.Size = new System.Drawing.Size(313, 26);
             this.txtDiUngThuoc.TabIndex = 25;
             // 
@@ -149,6 +153,7 @@
             this.txtTSB.Location = new System.Drawing.Point(663, 275);
             this.txtTSB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTSB.Name = "txtTSB";
+            this.txtTSB.ReadOnly = true;
             this.txtTSB.Size = new System.Drawing.Size(313, 26);
             this.txtTSB.TabIndex = 22;
             // 
@@ -157,6 +162,7 @@
             this.txtTinhTP.Location = new System.Drawing.Point(135, 275);
             this.txtTinhTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTinhTP.Name = "txtTinhTP";
+            this.txtTinhTP.ReadOnly = true;
             this.txtTinhTP.Size = new System.Drawing.Size(313, 26);
             this.txtTinhTP.TabIndex = 21;
             // 
@@ -178,51 +184,57 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Tỉnh/TP:";
             // 
-            // dtpNgay
+            // dtpNgaySinh
             // 
-            this.dtpNgay.Location = new System.Drawing.Point(135, 146);
-            this.dtpNgay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtpNgay.Name = "dtpNgay";
-            this.dtpNgay.Size = new System.Drawing.Size(313, 26);
-            this.dtpNgay.TabIndex = 18;
+            this.dtpNgaySinh.Enabled = false;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(135, 146);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(313, 26);
+            this.dtpNgaySinh.TabIndex = 18;
             // 
             // txtQH
             // 
             this.txtQH.Location = new System.Drawing.Point(663, 148);
             this.txtQH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtQH.Name = "txtQH";
+            this.txtQH.ReadOnly = true;
             this.txtQH.Size = new System.Drawing.Size(313, 26);
             this.txtQH.TabIndex = 17;
             // 
-            // txtTD
+            // txtTenDuong
             // 
-            this.txtTD.Location = new System.Drawing.Point(662, 79);
-            this.txtTD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTD.Name = "txtTD";
-            this.txtTD.Size = new System.Drawing.Size(313, 26);
-            this.txtTD.TabIndex = 16;
+            this.txtTenDuong.Location = new System.Drawing.Point(662, 79);
+            this.txtTenDuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenDuong.Name = "txtTenDuong";
+            this.txtTenDuong.ReadOnly = true;
+            this.txtTenDuong.Size = new System.Drawing.Size(313, 26);
+            this.txtTenDuong.TabIndex = 16;
             // 
-            // txtSN
+            // txtSoNha
             // 
-            this.txtSN.Location = new System.Drawing.Point(662, 21);
-            this.txtSN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSN.Name = "txtSN";
-            this.txtSN.Size = new System.Drawing.Size(313, 26);
-            this.txtSN.TabIndex = 15;
+            this.txtSoNha.Location = new System.Drawing.Point(662, 21);
+            this.txtSoNha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSoNha.Name = "txtSoNha";
+            this.txtSoNha.ReadOnly = true;
+            this.txtSoNha.Size = new System.Drawing.Size(313, 26);
+            this.txtSoNha.TabIndex = 15;
             // 
-            // txtBN
+            // txtTenBN
             // 
-            this.txtBN.Location = new System.Drawing.Point(135, 76);
-            this.txtBN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBN.Name = "txtBN";
-            this.txtBN.Size = new System.Drawing.Size(313, 26);
-            this.txtBN.TabIndex = 14;
+            this.txtTenBN.Location = new System.Drawing.Point(135, 76);
+            this.txtTenBN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenBN.Name = "txtTenBN";
+            this.txtTenBN.ReadOnly = true;
+            this.txtTenBN.Size = new System.Drawing.Size(313, 26);
+            this.txtTenBN.TabIndex = 14;
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(135, 210);
+            this.txtCMND.Location = new System.Drawing.Point(136, 213);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCMND.Name = "txtCMND";
+            this.txtCMND.ReadOnly = true;
             this.txtCMND.Size = new System.Drawing.Size(313, 26);
             this.txtCMND.TabIndex = 13;
             // 
@@ -231,21 +243,9 @@
             this.txtCSYT.Location = new System.Drawing.Point(136, 339);
             this.txtCSYT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCSYT.Name = "txtCSYT";
+            this.txtCSYT.ReadOnly = true;
             this.txtCSYT.Size = new System.Drawing.Size(313, 26);
             this.txtCSYT.TabIndex = 11;
-            // 
-            // btnSuaTTCN
-            // 
-            this.btnSuaTTCN.BackColor = System.Drawing.Color.Orange;
-            this.btnSuaTTCN.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSuaTTCN.Location = new System.Drawing.Point(845, 513);
-            this.btnSuaTTCN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSuaTTCN.Name = "btnSuaTTCN";
-            this.btnSuaTTCN.Size = new System.Drawing.Size(178, 44);
-            this.btnSuaTTCN.TabIndex = 8;
-            this.btnSuaTTCN.Text = "Sửa thông tin";
-            this.btnSuaTTCN.UseVisualStyleBackColor = false;
-            this.btnSuaTTCN.Click += new System.EventHandler(this.btnSuaTTCN_Click);
             // 
             // label10
             // 
@@ -319,11 +319,54 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Mã BN:";
             // 
+            // btnSuaTTCN
+            // 
+            this.btnSuaTTCN.BackColor = System.Drawing.Color.Orange;
+            this.btnSuaTTCN.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSuaTTCN.Location = new System.Drawing.Point(860, 522);
+            this.btnSuaTTCN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSuaTTCN.Name = "btnSuaTTCN";
+            this.btnSuaTTCN.Size = new System.Drawing.Size(178, 44);
+            this.btnSuaTTCN.TabIndex = 8;
+            this.btnSuaTTCN.Text = "Sửa thông tin";
+            this.btnSuaTTCN.UseVisualStyleBackColor = false;
+            this.btnSuaTTCN.Click += new System.EventHandler(this.btnSuaTTCN_Click);
+            // 
+            // btnHuySuaTTCN
+            // 
+            this.btnHuySuaTTCN.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHuySuaTTCN.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuySuaTTCN.Location = new System.Drawing.Point(755, 522);
+            this.btnHuySuaTTCN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHuySuaTTCN.Name = "btnHuySuaTTCN";
+            this.btnHuySuaTTCN.Size = new System.Drawing.Size(118, 44);
+            this.btnHuySuaTTCN.TabIndex = 25;
+            this.btnHuySuaTTCN.Text = "Hủy";
+            this.btnHuySuaTTCN.UseVisualStyleBackColor = false;
+            this.btnHuySuaTTCN.Visible = false;
+            this.btnHuySuaTTCN.Click += new System.EventHandler(this.btnHuySuaTTCN_Click);
+            // 
+            // btnSuaTTCNAcp
+            // 
+            this.btnSuaTTCNAcp.BackColor = System.Drawing.Color.Orange;
+            this.btnSuaTTCNAcp.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSuaTTCNAcp.Location = new System.Drawing.Point(891, 522);
+            this.btnSuaTTCNAcp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSuaTTCNAcp.Name = "btnSuaTTCNAcp";
+            this.btnSuaTTCNAcp.Size = new System.Drawing.Size(118, 44);
+            this.btnSuaTTCNAcp.TabIndex = 26;
+            this.btnSuaTTCNAcp.Text = "Sửa";
+            this.btnSuaTTCNAcp.UseVisualStyleBackColor = false;
+            this.btnSuaTTCNAcp.Visible = false;
+            this.btnSuaTTCNAcp.Click += new System.EventHandler(this.btnSuaTTCNAcp_Click);
+            // 
             // BN_TTCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 579);
+            this.Controls.Add(this.btnSuaTTCNAcp);
+            this.Controls.Add(this.btnHuySuaTTCN);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSuaTTCN);
@@ -350,11 +393,11 @@
         private System.Windows.Forms.TextBox txtTinhTP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpNgay;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.TextBox txtQH;
-        private System.Windows.Forms.TextBox txtTD;
-        private System.Windows.Forms.TextBox txtSN;
-        private System.Windows.Forms.TextBox txtBN;
+        private System.Windows.Forms.TextBox txtTenDuong;
+        private System.Windows.Forms.TextBox txtSoNha;
+        private System.Windows.Forms.TextBox txtTenBN;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtCSYT;
         private System.Windows.Forms.Label label10;
@@ -366,5 +409,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnSuaTTCN;
+        private System.Windows.Forms.Button btnHuySuaTTCN;
+        private System.Windows.Forms.Button btnSuaTTCNAcp;
     }
 }

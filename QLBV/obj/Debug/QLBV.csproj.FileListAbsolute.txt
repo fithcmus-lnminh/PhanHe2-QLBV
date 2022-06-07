@@ -11,3 +11,7 @@ D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.exe
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.pdb
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.BN_Main.resources
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.BN_TTCN.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.CSYT_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.CSYT_HSBA.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.CSYT_DVHSBA.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.NV_TTCN.resources

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLBV
 {
-    public partial class BN_Main : Form
+    public partial class CSYT_Main : Form
     {
-        public BN_Main()
+        public CSYT_Main()
         {
             InitializeComponent();
         }
@@ -34,9 +34,25 @@ namespace QLBV
 
         private void btnTTBN_Click(object sender, EventArgs e)
         {
-            BN_TTCN ttcn = new BN_TTCN();
+            CSYT_HSBA hsba = new CSYT_HSBA();
             Hide();
-            ttcn.ShowDialog();
+            hsba.ShowDialog();
+            Show();
+        }
+
+        private void btnDVHSBA_Click(object sender, EventArgs e)
+        {
+            CSYT_DVHSBA dv = new CSYT_DVHSBA();
+            Hide();
+            dv.ShowDialog();
+            Show();
+        }
+
+        private void btnTTCN_Click(object sender, EventArgs e)
+        {
+            NV_TTCN nv = new NV_TTCN();
+            Hide();
+            nv.ShowDialog();
             Show();
         }
     }
