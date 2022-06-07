@@ -46,6 +46,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "QUẢN LÝ HSBA VÀ DỊCH VỤ HSBA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnDangXuat
             // 

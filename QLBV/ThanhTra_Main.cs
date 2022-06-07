@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLBV
 {
-    public partial class CSYT_Main : Form
+    public partial class ThanhTra_Main : Form
     {
-        public CSYT_Main()
+        public ThanhTra_Main()
         {
             InitializeComponent();
         }
@@ -32,9 +32,9 @@ namespace QLBV
             }
         }
 
-        private void btnTTBN_Click(object sender, EventArgs e)
+        private void btnHSBA_Click(object sender, EventArgs e)
         {
-            CSYT_HSBA hsba = new CSYT_HSBA();
+            ThanhTra_HSBA hsba = new ThanhTra_HSBA();
             Hide();
             hsba.ShowDialog();
             Show();
@@ -42,23 +42,34 @@ namespace QLBV
 
         private void btnDVHSBA_Click(object sender, EventArgs e)
         {
-            CSYT_DVHSBA dv = new CSYT_DVHSBA();
+            ThanhTra_DVHSBA dv = new ThanhTra_DVHSBA();
             Hide();
             dv.ShowDialog();
             Show();
         }
 
-        private void btnTTCN_Click(object sender, EventArgs e)
+        private void btnTTBN_Click(object sender, EventArgs e)
         {
-            NV_TTCN nv = new NV_TTCN();
+            ThanhTra_BN bn = new ThanhTra_BN();
             Hide();
-            nv.ShowDialog();
+            bn.ShowDialog();
             Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCSYT_Click(object sender, EventArgs e)
         {
+            ThanhTra_CSYT csyt = new ThanhTra_CSYT();
+            Hide();
+            csyt.ShowDialog();
+            Show();
+        }
 
+        private void btnTTNV_Click(object sender, EventArgs e)
+        {
+            ThanhTra_NV nv = new ThanhTra_NV();
+            Hide();
+            nv.ShowDialog();
+            Show();
         }
     }
 }

@@ -19,8 +19,9 @@ namespace QLBV
 
         private void Button_Login_Click(object sender, EventArgs e)
         {
-            CSYT_Main bn = new CSYT_Main();
+            //CSYT_Main bn = new CSYT_Main();
             //BN_Main bn = new BN_Main();
+            ThanhTra_Main bn = new ThanhTra_Main();
             Hide();
             bn.ShowDialog();
             Show();
