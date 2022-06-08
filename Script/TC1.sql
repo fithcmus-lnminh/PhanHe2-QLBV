@@ -1,0 +1,14 @@
+--Tao user dba QLCSYT (SYS)
+CREATE USER QLCSYT IDENTIFIED BY 123456;
+GRANT ALL PRIVILEGES TO QLCSYT;
+
+
+--Cap quyen vao bang DBMS_CRYPTO de cai dat ma hoa
+GRANT EXECUTE ON SYS.DBMS_CRYPTO TO QLCSYT;
+
+
+--Cap quyen doc audit_trail
+GRANT SELECT ON DBA_AUDIT_TRAIL TO QLCSYT;
+
+
+--Du lieu CSYT, NHANVIEN va BENHNHAN duoc luu trong file tuong ung
