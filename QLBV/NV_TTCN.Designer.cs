@@ -32,19 +32,19 @@
             this.btnHuySuaTTCNNV = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbPhai = new System.Windows.Forms.ComboBox();
+            this.cbVaiTro = new System.Windows.Forms.ComboBox();
+            this.cbCSYT = new System.Windows.Forms.ComboBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblMaBN = new System.Windows.Forms.Label();
-            this.txtVaiTroNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtChuyenKhoaNV = new System.Windows.Forms.TextBox();
             this.txtCMNDNV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpNgaySinhNV = new System.Windows.Forms.DateTimePicker();
-            this.txtCSYTNV = new System.Windows.Forms.TextBox();
             this.txtSDTNV = new System.Windows.Forms.TextBox();
             this.txtQueQuanNV = new System.Windows.Forms.TextBox();
             this.txtHoTenNV = new System.Windows.Forms.TextBox();
-            this.txtPhaiNV = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.txtNgaySinhNV = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.btnSuaTTCNNV = new System.Windows.Forms.Button();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.cbChuyenKhoa = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,20 +99,20 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cbChuyenKhoa);
+            this.panel2.Controls.Add(this.cbPhai);
+            this.panel2.Controls.Add(this.cbVaiTro);
+            this.panel2.Controls.Add(this.cbCSYT);
             this.panel2.Controls.Add(this.txtMaNV);
             this.panel2.Controls.Add(this.lblMaBN);
-            this.panel2.Controls.Add(this.txtVaiTroNV);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtChuyenKhoaNV);
             this.panel2.Controls.Add(this.txtCMNDNV);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dtpNgaySinhNV);
-            this.panel2.Controls.Add(this.txtCSYTNV);
             this.panel2.Controls.Add(this.txtSDTNV);
             this.panel2.Controls.Add(this.txtQueQuanNV);
             this.panel2.Controls.Add(this.txtHoTenNV);
-            this.panel2.Controls.Add(this.txtPhaiNV);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
@@ -126,6 +126,65 @@
             this.panel2.Size = new System.Drawing.Size(1016, 352);
             this.panel2.TabIndex = 28;
             // 
+            // cbPhai
+            // 
+            this.cbPhai.Enabled = false;
+            this.cbPhai.FormattingEnabled = true;
+            this.cbPhai.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbPhai.Location = new System.Drawing.Point(135, 137);
+            this.cbPhai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbPhai.Name = "cbPhai";
+            this.cbPhai.Size = new System.Drawing.Size(313, 28);
+            this.cbPhai.TabIndex = 31;
+            // 
+            // cbVaiTro
+            // 
+            this.cbVaiTro.Enabled = false;
+            this.cbVaiTro.FormattingEnabled = true;
+            this.cbVaiTro.Items.AddRange(new object[] {
+            "Thanh Tra",
+            "Cơ sở y tế",
+            "Y sĩ / Bác sĩ",
+            "Nghiên cứu"});
+            this.cbVaiTro.Location = new System.Drawing.Point(663, 205);
+            this.cbVaiTro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbVaiTro.Name = "cbVaiTro";
+            this.cbVaiTro.Size = new System.Drawing.Size(313, 28);
+            this.cbVaiTro.TabIndex = 30;
+            this.cbVaiTro.SelectedIndexChanged += new System.EventHandler(this.cbVaiTro_SelectedIndexChanged);
+            // 
+            // cbCSYT
+            // 
+            this.cbCSYT.Enabled = false;
+            this.cbCSYT.FormattingEnabled = true;
+            this.cbCSYT.Items.AddRange(new object[] {
+            "CS1",
+            "CS2",
+            "CS3",
+            "CS4",
+            "CS5",
+            "CS6",
+            "CS7",
+            "CS8",
+            "CS9",
+            "CS10"});
+            this.cbCSYT.Location = new System.Drawing.Point(663, 140);
+            this.cbCSYT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbCSYT.Name = "cbCSYT";
+            this.cbCSYT.Size = new System.Drawing.Size(313, 28);
+            this.cbCSYT.TabIndex = 29;
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Location = new System.Drawing.Point(135, 22);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
+            this.txtMaNV.Size = new System.Drawing.Size(313, 26);
+            this.txtMaNV.TabIndex = 28;
+            // 
             // lblMaBN
             // 
             this.lblMaBN.AutoSize = true;
@@ -134,32 +193,14 @@
             this.lblMaBN.Size = new System.Drawing.Size(0, 20);
             this.lblMaBN.TabIndex = 27;
             // 
-            // txtVaiTroNV
-            // 
-            this.txtVaiTroNV.Location = new System.Drawing.Point(663, 213);
-            this.txtVaiTroNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtVaiTroNV.Name = "txtVaiTroNV";
-            this.txtVaiTroNV.ReadOnly = true;
-            this.txtVaiTroNV.Size = new System.Drawing.Size(313, 26);
-            this.txtVaiTroNV.TabIndex = 25;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(570, 219);
+            this.label4.Location = new System.Drawing.Point(570, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Vai trò:";
-            // 
-            // txtChuyenKhoaNV
-            // 
-            this.txtChuyenKhoaNV.Location = new System.Drawing.Point(663, 275);
-            this.txtChuyenKhoaNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtChuyenKhoaNV.Name = "txtChuyenKhoaNV";
-            this.txtChuyenKhoaNV.ReadOnly = true;
-            this.txtChuyenKhoaNV.Size = new System.Drawing.Size(313, 26);
-            this.txtChuyenKhoaNV.TabIndex = 22;
             // 
             // txtCMNDNV
             // 
@@ -197,15 +238,6 @@
             this.dtpNgaySinhNV.Size = new System.Drawing.Size(313, 26);
             this.dtpNgaySinhNV.TabIndex = 18;
             // 
-            // txtCSYTNV
-            // 
-            this.txtCSYTNV.Location = new System.Drawing.Point(663, 148);
-            this.txtCSYTNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCSYTNV.Name = "txtCSYTNV";
-            this.txtCSYTNV.ReadOnly = true;
-            this.txtCSYTNV.Size = new System.Drawing.Size(313, 26);
-            this.txtCSYTNV.TabIndex = 17;
-            // 
             // txtSDTNV
             // 
             this.txtSDTNV.Location = new System.Drawing.Point(662, 79);
@@ -233,19 +265,10 @@
             this.txtHoTenNV.Size = new System.Drawing.Size(313, 26);
             this.txtHoTenNV.TabIndex = 14;
             // 
-            // txtPhaiNV
-            // 
-            this.txtPhaiNV.Location = new System.Drawing.Point(135, 137);
-            this.txtPhaiNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhaiNV.Name = "txtPhaiNV";
-            this.txtPhaiNV.ReadOnly = true;
-            this.txtPhaiNV.Size = new System.Drawing.Size(313, 26);
-            this.txtPhaiNV.TabIndex = 13;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(574, 151);
+            this.label10.Location = new System.Drawing.Point(574, 145);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 7;
@@ -318,14 +341,23 @@
             this.btnSuaTTCNNV.UseVisualStyleBackColor = false;
             this.btnSuaTTCNNV.Click += new System.EventHandler(this.btnSuaTTCNNV_Click);
             // 
-            // txtMaNV
+            // cbChuyenKhoa
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(135, 22);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.ReadOnly = true;
-            this.txtMaNV.Size = new System.Drawing.Size(313, 26);
-            this.txtMaNV.TabIndex = 28;
+            this.cbChuyenKhoa.Enabled = false;
+            this.cbChuyenKhoa.FormattingEnabled = true;
+            this.cbChuyenKhoa.Items.AddRange(new object[] {
+            "CK1",
+            "CK2",
+            "CK3",
+            "CK4",
+            "CK5",
+            "CK6",
+            "CK7"});
+            this.cbChuyenKhoa.Location = new System.Drawing.Point(662, 275);
+            this.cbChuyenKhoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbChuyenKhoa.Name = "cbChuyenKhoa";
+            this.cbChuyenKhoa.Size = new System.Drawing.Size(313, 28);
+            this.cbChuyenKhoa.TabIndex = 32;
             // 
             // NV_TTCN
             // 
@@ -338,6 +370,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSuaTTCNNV);
             this.Name = "NV_TTCN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin cá nhân";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -354,18 +387,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaBN;
-        private System.Windows.Forms.TextBox txtVaiTroNV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtChuyenKhoaNV;
         private System.Windows.Forms.TextBox txtCMNDNV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpNgaySinhNV;
-        private System.Windows.Forms.TextBox txtCSYTNV;
         private System.Windows.Forms.TextBox txtSDTNV;
         private System.Windows.Forms.TextBox txtQueQuanNV;
         private System.Windows.Forms.TextBox txtHoTenNV;
-        private System.Windows.Forms.TextBox txtPhaiNV;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -374,5 +403,9 @@
         private System.Windows.Forms.Label txtNgaySinhNV;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnSuaTTCNNV;
+        private System.Windows.Forms.ComboBox cbPhai;
+        private System.Windows.Forms.ComboBox cbVaiTro;
+        private System.Windows.Forms.ComboBox cbCSYT;
+        private System.Windows.Forms.ComboBox cbChuyenKhoa;
     }
 }

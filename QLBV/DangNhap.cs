@@ -21,7 +21,9 @@ namespace QLBV
         {
             //CSYT_Main bn = new CSYT_Main();
             //BN_Main bn = new BN_Main();
-            ThanhTra_Main bn = new ThanhTra_Main();
+            //ThanhTra_Main bn = new ThanhTra_Main();
+            //YBS_Main bn = new YBS_Main();
+            NC_Main bn = new NC_Main();
             Hide();
             bn.ShowDialog();
             Show();

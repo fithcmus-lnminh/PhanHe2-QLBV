@@ -30,7 +30,7 @@ namespace QLBV
             dtpNgaySinh.Enabled = true;
             txtCMND.ReadOnly = false;
             txtTinhTP.ReadOnly = false;
-            txtCSYT.ReadOnly = false;
+            cbCSYT.Enabled = true;
             txtSoNha.ReadOnly = false;
             txtTenDuong.ReadOnly = false;
             txtQH.ReadOnly = false;
@@ -48,7 +48,7 @@ namespace QLBV
             dtpNgaySinh.Enabled = false;
             txtCMND.ReadOnly = true;
             txtTinhTP.ReadOnly = true;
-            txtCSYT.ReadOnly = true;
+            cbCSYT.Enabled = false;
             txtSoNha.ReadOnly = true;
             txtTenDuong.ReadOnly = true;
             txtQH.ReadOnly = true;
@@ -66,7 +66,7 @@ namespace QLBV
             dtpNgaySinh.Enabled = false;
             txtCMND.ReadOnly = true;
             txtTinhTP.ReadOnly = true;
-            txtCSYT.ReadOnly = true;
+            cbCSYT.Enabled = false;
             txtSoNha.ReadOnly = true;
             txtTenDuong.ReadOnly = true;
             txtQH.ReadOnly = true;

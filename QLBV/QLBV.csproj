@@ -82,6 +82,24 @@
     <Compile Include="BN_Main.Designer.cs">
       <DependentUpon>BN_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="NC_DVHSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NC_DVHSBA.Designer.cs">
+      <DependentUpon>NC_DVHSBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NC_HSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NC_HSBA.Designer.cs">
+      <DependentUpon>NC_HSBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NC_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NC_Main.Designer.cs">
+      <DependentUpon>NC_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="NV_TTCN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +144,24 @@
     <Compile Include="ThanhTra_NV.Designer.cs">
       <DependentUpon>ThanhTra_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="YBS_HSBA_DVHSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YBS_HSBA_DVHSBA.Designer.cs">
+      <DependentUpon>YBS_HSBA_DVHSBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YBS_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YBS_Main.Designer.cs">
+      <DependentUpon>YBS_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YBS_TTBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YBS_TTBN.Designer.cs">
+      <DependentUpon>YBS_TTBN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BN_TTCN.resx">
       <DependentUpon>BN_TTCN.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +179,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BN_Main.resx">
       <DependentUpon>BN_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NC_DVHSBA.resx">
+      <DependentUpon>NC_DVHSBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NC_HSBA.resx">
+      <DependentUpon>NC_HSBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NC_Main.resx">
+      <DependentUpon>NC_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NV_TTCN.resx">
       <DependentUpon>NV_TTCN.cs</DependentUpon>
@@ -173,6 +218,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhTra_NV.resx">
       <DependentUpon>ThanhTra_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YBS_HSBA_DVHSBA.resx">
+      <DependentUpon>YBS_HSBA_DVHSBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YBS_Main.resx">
+      <DependentUpon>YBS_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YBS_TTBN.resx">
+      <DependentUpon>YBS_TTBN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

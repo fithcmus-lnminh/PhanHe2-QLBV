@@ -21,3 +21,9 @@ D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.ThanhTra_DVHSBA.resources
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.ThanhTra_BN.resources
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.ThanhTra_CSYT.resources
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.ThanhTra_NV.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.YBS_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.YBS_HSBA_DVHSBA.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.YBS_TTBN.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.NC_HSBA.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.NC_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.NC_DVHSBA.resources

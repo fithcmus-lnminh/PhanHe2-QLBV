@@ -21,13 +21,13 @@ namespace QLBV
         {
             txtHoTenNV.ReadOnly = false;
             dtpNgaySinhNV.Enabled = true;
-            txtPhaiNV.ReadOnly = false;
+            cbPhai.Enabled = true;
             txtCMNDNV.ReadOnly = false;
             txtQueQuanNV.ReadOnly = false;
             txtSDTNV.ReadOnly = false;
-            txtCSYTNV.ReadOnly = false;
-            txtVaiTroNV.ReadOnly = false;
-            txtChuyenKhoaNV.ReadOnly = false;
+            cbCSYT.Enabled = true;
+            cbVaiTro.Enabled = true;
+            if (cbVaiTro.Text == "Y sĩ / Bác sĩ" || cbVaiTro.Text == "Nghiên cứu") cbChuyenKhoa.Enabled = true;
             btnSuaTTCNNV.Visible = false;
             btnHuySuaTTCNNV.Visible = true;
             btnSuaTTCNAcpNV.Visible = true;
@@ -37,13 +37,13 @@ namespace QLBV
         {
             txtHoTenNV.ReadOnly = true;
             dtpNgaySinhNV.Enabled = false;
-            txtPhaiNV.ReadOnly = true;
+            cbPhai.Enabled = false;
             txtCMNDNV.ReadOnly = true;
             txtQueQuanNV.ReadOnly = true;
             txtSDTNV.ReadOnly = true;
-            txtCSYTNV.ReadOnly = true;
-            txtVaiTroNV.ReadOnly = true;
-            txtChuyenKhoaNV.ReadOnly = true;
+            cbCSYT.Enabled = false;
+            cbVaiTro.Enabled = false;
+            cbChuyenKhoa.Enabled = false;
             btnSuaTTCNNV.Visible = true;
             btnHuySuaTTCNNV.Visible = false;
             btnSuaTTCNAcpNV.Visible = false;
@@ -53,16 +53,25 @@ namespace QLBV
         {
             txtHoTenNV.ReadOnly = true;
             dtpNgaySinhNV.Enabled = false;
-            txtPhaiNV.ReadOnly = true;
+            cbPhai.Enabled = false;
             txtCMNDNV.ReadOnly = true;
             txtQueQuanNV.ReadOnly = true;
             txtSDTNV.ReadOnly = true;
-            txtCSYTNV.ReadOnly = true;
-            txtVaiTroNV.ReadOnly = true;
-            txtChuyenKhoaNV.ReadOnly = true;
+            cbCSYT.Enabled = false;
+            cbVaiTro.Enabled = false;
+            cbChuyenKhoa.Enabled = false;
             btnSuaTTCNNV.Visible = true;
             btnHuySuaTTCNNV.Visible = false;
             btnSuaTTCNAcpNV.Visible = false;
+        }
+
+        private void cbVaiTro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbVaiTro.Text == "Y sĩ / Bác sĩ" || cbVaiTro.Text == "Nghiên cứu")
+            {
+                cbChuyenKhoa.Enabled = true;
+            }
+            else cbChuyenKhoa.Enabled = false;
         }
     }
 }

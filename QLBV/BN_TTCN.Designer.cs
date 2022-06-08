@@ -45,7 +45,6 @@
             this.txtSoNha = new System.Windows.Forms.TextBox();
             this.txtTenBN = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtCSYT = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.btnSuaTTCN = new System.Windows.Forms.Button();
             this.btnHuySuaTTCN = new System.Windows.Forms.Button();
             this.btnSuaTTCNAcp = new System.Windows.Forms.Button();
+            this.cbCSYT = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cbCSYT);
             this.panel2.Controls.Add(this.lblMaBN);
             this.panel2.Controls.Add(this.txtTSBGD);
             this.panel2.Controls.Add(this.txtDiUngThuoc);
@@ -89,7 +90,6 @@
             this.panel2.Controls.Add(this.txtSoNha);
             this.panel2.Controls.Add(this.txtTenBN);
             this.panel2.Controls.Add(this.txtCMND);
-            this.panel2.Controls.Add(this.txtCSYT);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
@@ -238,15 +238,6 @@
             this.txtCMND.Size = new System.Drawing.Size(313, 26);
             this.txtCMND.TabIndex = 13;
             // 
-            // txtCSYT
-            // 
-            this.txtCSYT.Location = new System.Drawing.Point(136, 339);
-            this.txtCSYT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCSYT.Name = "txtCSYT";
-            this.txtCSYT.ReadOnly = true;
-            this.txtCSYT.Size = new System.Drawing.Size(313, 26);
-            this.txtCSYT.TabIndex = 11;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -306,9 +297,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(27, 339);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(81, 20);
+            this.label16.Size = new System.Drawing.Size(55, 20);
             this.label16.TabIndex = 1;
-            this.label16.Text = "Mã CSYT:";
+            this.label16.Text = "CSYT:";
             // 
             // label17
             // 
@@ -360,6 +351,27 @@
             this.btnSuaTTCNAcp.Visible = false;
             this.btnSuaTTCNAcp.Click += new System.EventHandler(this.btnSuaTTCNAcp_Click);
             // 
+            // cbCSYT
+            // 
+            this.cbCSYT.Enabled = false;
+            this.cbCSYT.FormattingEnabled = true;
+            this.cbCSYT.Items.AddRange(new object[] {
+            "CS1",
+            "CS2",
+            "CS3",
+            "CS4",
+            "CS5",
+            "CS6",
+            "CS7",
+            "CS8",
+            "CS9",
+            "CS10"});
+            this.cbCSYT.Location = new System.Drawing.Point(135, 336);
+            this.cbCSYT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbCSYT.Name = "cbCSYT";
+            this.cbCSYT.Size = new System.Drawing.Size(313, 28);
+            this.cbCSYT.TabIndex = 28;
+            // 
             // BN_TTCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -399,7 +411,6 @@
         private System.Windows.Forms.TextBox txtSoNha;
         private System.Windows.Forms.TextBox txtTenBN;
         private System.Windows.Forms.TextBox txtCMND;
-        private System.Windows.Forms.TextBox txtCSYT;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -411,5 +422,6 @@
         private System.Windows.Forms.Button btnSuaTTCN;
         private System.Windows.Forms.Button btnHuySuaTTCN;
         private System.Windows.Forms.Button btnSuaTTCNAcp;
+        private System.Windows.Forms.ComboBox cbCSYT;
     }
 }
