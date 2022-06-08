@@ -16,19 +16,19 @@ BEGIN
     VALUES (manv, hoten, phai,TO_DATE(ngaysinh,'yyyy-mm-dd'),CMND,quequan, sodt, csyt, vaitro, chuyenkhoa);
     strSQL :='CREATE USER "'||manv||'" IDENTIFIED BY "'||manv||'"';
     EXECUTE IMMEDIATE (strSQL);
-    strSQL :='GRANT R_NHANVIEN TO "'||manv||'"';
+    strSQL:= 'GRANT CREATE SESSION TO '||manv;
     EXECUTE IMMEDIATE (strSQL);
     
-    IF (vaitro = 'Thanh tra') THEN
+    IF (vaitro ='Thanh tra') THEN
         strSQL :='GRANT R_THANHTRA TO "'||manv||'"';
         EXECUTE IMMEDIATE (strSQL);
-    ELSIF (vaitro ='Co so y te') THEN
+    ELSIF (vaitro = 'Co so y te') THEN
         strSQL :='GRANT R_COSOYTE TO "'||manv||'"';
         EXECUTE IMMEDIATE (strSQL);
-    ELSIF (vaitro ='Y si / Bac si') THEN
+    ELSIF (vaitro = 'Y si / Bac si') THEN
         strSQL :='GRANT R_YSI_BACSI TO "'||manv||'"';
         EXECUTE IMMEDIATE (strSQL);
-    ELSIF (vaitro ='Nghien cuu') THEN
+    ELSIF (vaitro = 'Nghien cuu') THEN
         strSQL :='GRANT R_NGHIENCUU TO "'||manv||'"';
         EXECUTE IMMEDIATE (strSQL);
     END IF;
@@ -55,6 +55,8 @@ BEGIN
     INSERT INTO BENHNHAN ("MABN","MACSYT","TENBN","CMND","NGAYSINH","SONHA","TENDUONG","QUANHUYEN","TINHTP","TIENSUBENH","TIENSUBENHGD","DIUNGTHUOC")
     VALUES (mabn,macsyt,tenbn,CMND,TO_DATE(ngaysinh,'yyyy-mm-dd'),sonha,tenduong,quanhuyen,tinhtp,tiensubenh,tiensubenhgd,diungthuoc);
     strSQL :='CREATE USER "'||mabn||'" IDENTIFIED BY "'||mabn||'"';
+    EXECUTE IMMEDIATE (strSQL);
+    strSQL:= 'GRANT CREATE SESSION TO '||mabn;
     EXECUTE IMMEDIATE (strSQL);
     strSQL :='GRANT R_BENHNHAN TO "'||mabn||'"';
     EXECUTE IMMEDIATE (strSQL);
