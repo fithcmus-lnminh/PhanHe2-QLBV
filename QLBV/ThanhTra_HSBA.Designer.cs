@@ -98,6 +98,7 @@
             this.Name = "ThanhTra_HSBA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ sơ bệnh án";
+            this.Load += new System.EventHandler(this.ThanhTra_HSBA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSBA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
