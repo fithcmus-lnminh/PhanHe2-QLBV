@@ -44,21 +44,21 @@
             this.txtMaKTV = new System.Windows.Forms.TextBox();
             this.txtMaDV = new System.Windows.Forms.TextBox();
             this.txtMaHSBADV = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHSBA_DV)).BeginInit();
             this.panel1.SuspendLayout();
@@ -75,6 +75,7 @@
             this.btnTim.TabIndex = 34;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTimHSBA
             // 
@@ -98,7 +99,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label18.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label18.Location = new System.Drawing.Point(137, 24);
+            this.label18.Location = new System.Drawing.Point(232, 23);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(418, 43);
             this.label18.TabIndex = 31;
@@ -217,18 +218,6 @@
             this.txtMaHSBADV.Size = new System.Drawing.Size(228, 26);
             this.txtMaHSBADV.TabIndex = 10;
             // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnXoa.Location = new System.Drawing.Point(1070, 14);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(148, 41);
-            this.btnXoa.TabIndex = 9;
-            this.btnXoa.Text = "Xóa dịch vụ";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.LimeGreen;
@@ -239,6 +228,7 @@
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm dịch vụ";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label9
             // 
@@ -285,6 +275,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã HSBA:";
             // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnXoa.Location = new System.Drawing.Point(1070, 14);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(148, 41);
+            this.btnXoa.TabIndex = 9;
+            this.btnXoa.Text = "Xóa dịch vụ";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -326,6 +328,15 @@
             this.textBox1.Size = new System.Drawing.Size(184, 26);
             this.textBox1.TabIndex = 23;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 20);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Mã HSBA:";
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(118, 21);
@@ -333,15 +344,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(179, 26);
             this.textBox2.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(706, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Ngày:";
             // 
             // label8
             // 
@@ -352,14 +354,14 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Mã DV:";
             // 
-            // label10
+            // label7
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 20);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Mã HSBA:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(706, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 20);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Ngày:";
             // 
             // label11
             // 
@@ -389,6 +391,7 @@
             this.Name = "CSYT_DVHSBA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dịch vụ hồ sơ bệnh án";
+            this.Load += new System.EventHandler(this.CSYT_DVHSBA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHSBA_DV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -41,7 +41,7 @@
             this.txtChanDoan = new System.Windows.Forms.TextBox();
             this.txtMaBN = new System.Windows.Forms.TextBox();
             this.txtMaHSBA = new System.Windows.Forms.TextBox();
-            this.btnXoaHSBA = new System.Windows.Forms.Button();
+            this.btnThemHSBA = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnXoaHSBA = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
             this.txtTimHSBA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,12 +63,11 @@
             this.colMaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaCSYT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colKetLuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThemHSBA = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtMaHSBAXoa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHSBA)).BeginInit();
             this.panel1.SuspendLayout();
@@ -78,7 +78,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label18.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label18.Location = new System.Drawing.Point(276, 19);
+            this.label18.Location = new System.Drawing.Point(292, 17);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(312, 43);
             this.label18.TabIndex = 25;
@@ -117,6 +117,7 @@
             this.dtpNgayHSBA.Name = "dtpNgayHSBA";
             this.dtpNgayHSBA.Size = new System.Drawing.Size(439, 26);
             this.dtpNgayHSBA.TabIndex = 18;
+            this.dtpNgayHSBA.Value = new System.DateTime(2022, 6, 21, 22, 3, 47, 0);
             // 
             // txtKetLuan
             // 
@@ -174,17 +175,18 @@
             this.txtMaHSBA.Size = new System.Drawing.Size(419, 26);
             this.txtMaHSBA.TabIndex = 10;
             // 
-            // btnXoaHSBA
+            // btnThemHSBA
             // 
-            this.btnXoaHSBA.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnXoaHSBA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnXoaHSBA.Location = new System.Drawing.Point(779, 19);
-            this.btnXoaHSBA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoaHSBA.Name = "btnXoaHSBA";
-            this.btnXoaHSBA.Size = new System.Drawing.Size(130, 41);
-            this.btnXoaHSBA.TabIndex = 9;
-            this.btnXoaHSBA.Text = "Xóa HSBA";
-            this.btnXoaHSBA.UseVisualStyleBackColor = false;
+            this.btnThemHSBA.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnThemHSBA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnThemHSBA.Location = new System.Drawing.Point(569, 251);
+            this.btnThemHSBA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThemHSBA.Name = "btnThemHSBA";
+            this.btnThemHSBA.Size = new System.Drawing.Size(144, 41);
+            this.btnThemHSBA.TabIndex = 8;
+            this.btnThemHSBA.Text = "Thêm HSBA";
+            this.btnThemHSBA.UseVisualStyleBackColor = false;
+            this.btnThemHSBA.Click += new System.EventHandler(this.btnThemHSBA_Click);
             // 
             // label10
             // 
@@ -258,6 +260,18 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Mã HSBA:";
             // 
+            // btnXoaHSBA
+            // 
+            this.btnXoaHSBA.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXoaHSBA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnXoaHSBA.Location = new System.Drawing.Point(779, 19);
+            this.btnXoaHSBA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoaHSBA.Name = "btnXoaHSBA";
+            this.btnXoaHSBA.Size = new System.Drawing.Size(130, 41);
+            this.btnXoaHSBA.TabIndex = 9;
+            this.btnXoaHSBA.Text = "Xóa HSBA";
+            this.btnXoaHSBA.UseVisualStyleBackColor = false;
+            // 
             // btnTim
             // 
             this.btnTim.BackColor = System.Drawing.Color.LightGray;
@@ -268,6 +282,7 @@
             this.btnTim.TabIndex = 30;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTimHSBA
             // 
@@ -355,7 +370,7 @@
             // 
             // colChanDoan
             // 
-            this.colChanDoan.DataPropertyName = "CHUANDOAN";
+            this.colChanDoan.DataPropertyName = "CHANDOAN";
             this.colChanDoan.HeaderText = "Chẩn đoán";
             this.colChanDoan.MinimumWidth = 6;
             this.colChanDoan.Name = "colChanDoan";
@@ -388,19 +403,6 @@
             this.colKetLuan.MinimumWidth = 6;
             this.colKetLuan.Name = "colKetLuan";
             // 
-            // btnThemHSBA
-            // 
-            this.btnThemHSBA.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnThemHSBA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnThemHSBA.Location = new System.Drawing.Point(569, 251);
-            this.btnThemHSBA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnThemHSBA.Name = "btnThemHSBA";
-            this.btnThemHSBA.Size = new System.Drawing.Size(144, 41);
-            this.btnThemHSBA.TabIndex = 8;
-            this.btnThemHSBA.Text = "Thêm HSBA";
-            this.btnThemHSBA.UseVisualStyleBackColor = false;
-            this.btnThemHSBA.Click += new System.EventHandler(this.btnThemHSBA_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -422,16 +424,6 @@
             this.panel1.Size = new System.Drawing.Size(1245, 75);
             this.panel1.TabIndex = 32;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(41, 779);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 24);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "XÓA HSBA";
-            // 
             // txtMaHSBAXoa
             // 
             this.txtMaHSBAXoa.Location = new System.Drawing.Point(311, 25);
@@ -448,6 +440,16 @@
             this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "Mã HSBA:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(41, 779);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 24);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "XÓA HSBA";
             // 
             // CSYT_HSBA
             // 
@@ -467,6 +469,7 @@
             this.Name = "CSYT_HSBA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ sơ bệnh án";
+            this.Load += new System.EventHandler(this.CSYT_HSBA_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHSBA)).EndInit();
@@ -502,6 +505,12 @@
         private System.Windows.Forms.TextBox txtTimHSBA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgDSHSBA;
+        private System.Windows.Forms.Button btnThemHSBA;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtMaHSBAXoa;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaHSBA;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayHSBA;
@@ -510,11 +519,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaCSYT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKetLuan;
-        private System.Windows.Forms.Button btnThemHSBA;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtMaHSBAXoa;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
     }
 }
