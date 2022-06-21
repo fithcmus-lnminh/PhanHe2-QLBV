@@ -53,9 +53,43 @@ namespace QLBV
             txtTimHSBA.Text = "";
         }
 
+        private void updateDSDVHSBA()
+        {
+            OracleCommand cmd = con.CreateCommand();
+            cmd.CommandText = "SELECT * FROM QLCSYT.V_HSBA_DVHSBA";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dr.Close();
+            dgDSHSBA_DV.DataSource = dt;
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-           
+            if (txtMaHSBADV.Text == "" || txtMaDV.Text == "" || txtMaKTV.Text == "") { 
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết");
+                return;
+            }
+
+
+            OracleCommand cmd = con.CreateCommand();
+            cmd.CommandText = "INSERT INTO QLCSYT.V_HSBA_DVHSBA(MAHSBA, MADV, NGAY, MAKTV, KETQUA) VALUES ('"
+                + txtMaHSBADV.Text.ToString() + "', '" + txtMaDV.Text.ToString() + "', TO_DATE('" + dtpNgay.Value.ToShortDateString()
+                + "','mm/dd/yyyy'),'" + txtMaKTV.Text.ToString() + "', '" + txtKetQua.Text.ToString() + "')";
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm Dịch vu HSBA thành công!");
+                txtMaHSBADV.Text = "";
+                txtMaDV.Text = "";
+                txtMaKTV.Text = "";
+                txtKetQua.Text = "";
+                updateDSDVHSBA();
+            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); return; }
         }
     }
 }

@@ -34,8 +34,10 @@ namespace QLBV
             OracleDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-            dgDSHSBA.DataSource = dt.DefaultView;
+            dgDSHSBA.DataSource = dt;
             dr.Close();
+
+            txtMaCSYT.Text = dt.Rows[0][6].ToString();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace QLBV
         private void updateDSHSBA()
         {
             OracleCommand cmd = con.CreateCommand();
-            cmd.CommandText = "SELECT * FROM QLYCSYT.V_CSYT_HSBA";
+            cmd.CommandText = "SELECT * FROM QLCSYT.V_CSYT_HSBA";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -74,8 +76,8 @@ namespace QLBV
 
 
             OracleCommand cmd = con.CreateCommand();
-            cmd.CommandText = " INSERT INTO QLCSYT.V_CSYT_HSBA(MAHSBA, MABN, NGAY, CHANDOAN, MABS, MAKHOA, MACSYT, KETLUAN) VALUES ('"
-                + txtMaHSBA.Text.ToString() + "', '" + txtMaBN.Text.ToString() + "', TO_DATE('" + dtpNgayHSBA.Value.ToString("dd/mm/yyyy") + "','dd/mm/yyyy'),'"
+            cmd.CommandText = "INSERT INTO QLCSYT.V_CSYT_HSBA(MAHSBA, MABN, NGAY, CHANDOAN, MABS, MAKHOA, MACSYT, KETLUAN) VALUES ('"
+                + txtMaHSBA.Text.ToString() + "', '" + txtMaBN.Text.ToString() + "', TO_DATE('" + dtpNgayHSBA.Value.ToShortDateString() + "','mm/dd/yyyy'),'"
                 + txtChanDoan.Text.ToString() + "', '" + txtMaBS.Text.ToString() + "', '" + txtMaKhoa.Text.ToString() + "', '" + txtMaCSYT.Text.ToString()
                 + "', '" + txtKetLuan.Text.ToString() + "')";
             cmd.CommandType = CommandType.Text;
@@ -92,8 +94,30 @@ namespace QLBV
                 txtKetLuan.Text = "";
                 updateDSHSBA();
             }
-            catch (Exception exp) { MessageBox.Show("Thêm HSBA thất bại. Vui lòng kiểm tra lại giá trị nhập"); return; }
+            catch (Exception exp) { MessageBox.Show(exp.Message); return; }
             
+        }
+
+        private void btnXoaHSBA_Click(object sender, EventArgs e)
+        {
+            OracleCommand cmd1 = con.CreateCommand();
+            cmd1.CommandText = "DELETE FROM QLCSYT.V_HSBA_DVHSBA WHERE MAHSBA = '" + txtMaHSBAXoa.Text.ToString() + "'";
+            cmd1.CommandType = CommandType.Text;
+
+
+            OracleCommand cmd2 = con.CreateCommand();
+            cmd2.CommandText = "DELETE FROM QLCSYT.V_CSYT_HSBA WHERE MAHSBA = '" + txtMaHSBAXoa.Text.ToString() + "'";
+            cmd2.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd1.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Xóa HSBA thành công!");
+                txtMaHSBAXoa.Text = "";
+                updateDSHSBA();
+            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
     }
 }

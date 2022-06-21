@@ -212,7 +212,7 @@
             // 
             // txtMaHSBADV
             // 
-            this.txtMaHSBADV.Location = new System.Drawing.Point(135, 34);
+            this.txtMaHSBADV.Location = new System.Drawing.Point(135, 32);
             this.txtMaHSBADV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaHSBADV.Name = "txtMaHSBADV";
             this.txtMaHSBADV.Size = new System.Drawing.Size(228, 26);
