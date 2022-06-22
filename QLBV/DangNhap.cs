@@ -46,7 +46,8 @@ namespace QLBV
                 connectionStringsSection.ConnectionStrings["con"].ConnectionString = conString;
                 config.Save();
                 ConfigurationManager.RefreshSection("connectionStrings");
-                MessageBox.Show("Đăng nhập thành công!");
+                MessageBox.Show("Đăng nhập thành công!", "Thành công",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Hide();
                 string strSQL = "select GRANTED_ROLE from user_role_privs";
                 OracleCommand oCmd = new OracleCommand(strSQL, con);

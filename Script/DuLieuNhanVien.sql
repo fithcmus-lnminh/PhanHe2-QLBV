@@ -466,7 +466,7 @@ EXEC sp_THEMNHANVIEN('NV456',N'Bach Thanh Giao',N'Nu','1991-11-23','333339689',N
 EXEC sp_THEMNHANVIEN('NV457',N'Kim Bach Hao',N'Nu','1982-08-28','333358496',N'Ha Nam','0391123599','CS47', N'Y si / Bac si', 'CK8');
 EXEC sp_THEMNHANVIEN('NV458',N'Hua Bach Bien',N'Nam','1994-03-17','333358575',N'Lam Dong','0391114501','CS23', N'Y si / Bac si', 'CK8');
 EXEC sp_THEMNHANVIEN('NV459',N'Luu Hiep Le',N'Nam','1986-01-22','333334438',N'Son La','0901140236','CS19', N'Y si / Bac si', 'CK8');
-EXEC sp_THEMNHANVIEN('NV460',N'Ta Huu De',N'Nam','1986-02-23','333351267',N'Ha Nam','0901112344','CS16', N'Y si / Bac si', 'CK8);
+EXEC sp_THEMNHANVIEN('NV460',N'Ta Huu De',N'Nam','1986-02-23','333351267',N'Ha Nam','0901112344','CS16', N'Y si / Bac si', 'CK8');
 EXEC sp_THEMNHANVIEN('NV461',N'Chung Ngoc Van',N'Nu','1993-11-23','333359385',N'Son La','0391132704','CS13', N'Y si / Bac si', 'CK8');
 EXEC sp_THEMNHANVIEN('NV462',N'Luu Ngoc Tonh',N'Nu','1990-03-17','333363464',N'Cao Bang','0981143534','CS30', N'Y si / Bac si', 'CK8');
 EXEC sp_THEMNHANVIEN('NV463',N'Moc Viet Tri',N'Nu','1984-06-24','333346519',N'Can Tho','0391142282','CS44', N'Y si / Bac si', 'CK7');

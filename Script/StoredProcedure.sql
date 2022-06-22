@@ -14,26 +14,28 @@ AS
 BEGIN
     INSERT INTO NHANVIEN ("MANV", "HOTEN", "PHAI","NGAYSINH","CMND","QUEQUAN", "SODT","CSYT", "VAITRO", "CHUYENKHOA") 
     VALUES (manv, hoten, phai,TO_DATE(ngaysinh,'yyyy-mm-dd'),CMND,quequan, sodt, csyt, vaitro, chuyenkhoa);
+    strSQL := 'ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE';
+    EXECUTE IMMEDIATE (strSQL);
     strSQL :='CREATE USER "'||manv||'" IDENTIFIED BY "'||manv||'"';
     EXECUTE IMMEDIATE (strSQL);
     strSQL:= 'GRANT CREATE SESSION TO '||manv;
     EXECUTE IMMEDIATE (strSQL);
     
     IF (vaitro ='Thanh tra') THEN
-        strSQL :='GRANT R_THANHTRA TO "'||manv||'"';
+        strSQL := 'GRANT R_THANHTRA TO "' || manv || '"';
         EXECUTE IMMEDIATE (strSQL);
     ELSIF (vaitro = 'Co so y te') THEN
-        strSQL :='GRANT R_COSOYTE TO "'||manv||'"';
+        strSQL := 'GRANT R_COSOYTE TO "' || manv || '"';
         EXECUTE IMMEDIATE (strSQL);
     ELSIF (vaitro = 'Y si / Bac si') THEN
-        strSQL :='GRANT R_YSI_BACSI TO "'||manv||'"';
+        strSQL := 'GRANT R_YSI_BACSI TO "' || manv || '"';
         EXECUTE IMMEDIATE (strSQL);
     ELSIF (vaitro = 'Nghien cuu') THEN
-        strSQL :='GRANT R_NGHIENCUU TO "'||manv||'"';
+        strSQL := 'GRANT R_NGHIENCUU TO "' || manv || '"';
         EXECUTE IMMEDIATE (strSQL);
     END IF;
 END;
-
+/
 
 
 CREATE OR REPLACE PROCEDURE sp_THEMBENHNHAN(
@@ -54,10 +56,13 @@ AS
 BEGIN
     INSERT INTO BENHNHAN ("MABN","MACSYT","TENBN","CMND","NGAYSINH","SONHA","TENDUONG","QUANHUYEN","TINHTP","TIENSUBENH","TIENSUBENHGD","DIUNGTHUOC")
     VALUES (mabn,macsyt,tenbn,CMND,TO_DATE(ngaysinh,'yyyy-mm-dd'),sonha,tenduong,quanhuyen,tinhtp,tiensubenh,tiensubenhgd,diungthuoc);
-    strSQL :='CREATE USER "'||mabn||'" IDENTIFIED BY "'||mabn||'"';
+    strSQL := 'ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE';
     EXECUTE IMMEDIATE (strSQL);
-    strSQL:= 'GRANT CREATE SESSION TO '||mabn;
+    strSQL := 'CREATE USER "' || mabn || '" IDENTIFIED BY "' || mabn || '"';
     EXECUTE IMMEDIATE (strSQL);
-    strSQL :='GRANT R_BENHNHAN TO "'||mabn||'"';
+    strSQL := 'GRANT CREATE SESSION TO ' || mabn;
+    EXECUTE IMMEDIATE (strSQL);
+    strSQL := 'GRANT R_BENHNHAN TO "' || mabn || '"';
     EXECUTE IMMEDIATE (strSQL);
 END;
+/
