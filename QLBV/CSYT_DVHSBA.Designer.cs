@@ -53,12 +53,10 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaDVXoa = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaHSBAXoa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHSBA_DV)).BeginInit();
             this.panel1.SuspendLayout();
@@ -286,6 +284,7 @@
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa dịch vụ";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label5
             // 
@@ -300,68 +299,49 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtMaDVXoa);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtMaHSBAXoa);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(26, 724);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1242, 72);
             this.panel2.TabIndex = 37;
             // 
-            // dateTimePicker1
+            // txtMaDVXoa
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(777, 21);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(266, 26);
-            this.dateTimePicker1.TabIndex = 24;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(448, 21);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 26);
-            this.textBox1.TabIndex = 23;
+            this.txtMaDVXoa.Location = new System.Drawing.Point(739, 21);
+            this.txtMaDVXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaDVXoa.Name = "txtMaDVXoa";
+            this.txtMaDVXoa.Size = new System.Drawing.Size(221, 26);
+            this.txtMaDVXoa.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 24);
+            this.label10.Location = new System.Drawing.Point(233, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 20);
             this.label10.TabIndex = 19;
             this.label10.Text = "Mã HSBA:";
             // 
-            // textBox2
+            // txtMaHSBAXoa
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 21);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 26);
-            this.textBox2.TabIndex = 22;
+            this.txtMaHSBAXoa.Location = new System.Drawing.Point(327, 23);
+            this.txtMaHSBAXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaHSBAXoa.Name = "txtMaHSBAXoa";
+            this.txtMaHSBAXoa.Size = new System.Drawing.Size(231, 26);
+            this.txtMaHSBAXoa.TabIndex = 22;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(372, 26);
+            this.label8.Location = new System.Drawing.Point(663, 26);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 20;
             this.label8.Text = "Mã DV:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(706, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Ngày:";
             // 
             // label11
             // 
@@ -429,12 +409,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaDVXoa;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaHSBAXoa;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
     }
 }

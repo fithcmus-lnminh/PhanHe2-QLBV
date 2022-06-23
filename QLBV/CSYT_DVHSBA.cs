@@ -81,15 +81,47 @@ namespace QLBV
 
             try
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm Dịch vu HSBA thành công!");
-                txtMaHSBADV.Text = "";
-                txtMaDV.Text = "";
-                txtMaKTV.Text = "";
-                txtKetQua.Text = "";
-                updateDSDVHSBA();
+                int i = cmd.ExecuteNonQuery();
+                if (i == 0) MessageBox.Show("Dữ liệu nhập vào không hợp lệ hoặc đã tồn tại.");
+                    else
+                {
+                    MessageBox.Show("Thêm Dịch vu HSBA thành công!");
+                    txtMaHSBADV.Text = "";
+                    txtMaDV.Text = "";
+                    txtMaKTV.Text = "";
+                    txtKetQua.Text = "";
+                    updateDSDVHSBA();
+                }
+                    
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); return; }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (txtMaDVXoa.Text == "" || txtMaHSBAXoa.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin cần xóa");
+                return;
+            }
+
+            OracleCommand cmd = con.CreateCommand();
+            cmd.CommandText = "DELETE FROM QLCSYT.V_HSBA_DVHSBA WHERE MAHSBA = '" + txtMaHSBAXoa.Text.ToString() + "' AND MADV ='" + txtMaDVXoa.Text.ToString() + "'";
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i == 1) { MessageBox.Show("Xóa HSBA thành công!"); txtMaHSBAXoa.Text = "";
+                    txtMaDVXoa.Text = "";
+                    updateDSDVHSBA();
+                } else
+                {
+                    MessageBox.Show("Dữ liệu nhập vào không hợp lệ.");
+                }
+                
+            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
     }
 }

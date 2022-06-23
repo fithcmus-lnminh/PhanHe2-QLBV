@@ -84,15 +84,20 @@ namespace QLBV
 
             try
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm HSBA thành công!");
-                txtMaHSBA.Text = "";
-                txtMaBN.Text = "";
-                txtChanDoan.Text = "";
-                txtMaBS.Text = "";
-                txtMaKhoa.Text = "";
-                txtKetLuan.Text = "";
-                updateDSHSBA();
+                int i  = cmd.ExecuteNonQuery();
+                if (i == 0) MessageBox.Show("Dữ liệu nhập vào đã tồn tại hoặc không hợp lệ");
+                else
+                {
+                    MessageBox.Show("Thêm HSBA thành công!");
+                    txtMaHSBA.Text = "";
+                    txtMaBN.Text = "";
+                    txtChanDoan.Text = "";
+                    txtMaBS.Text = "";
+                    txtMaKhoa.Text = "";
+                    txtKetLuan.Text = "";
+                    updateDSHSBA();
+                }
+                
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); return; }
             
@@ -111,11 +116,16 @@ namespace QLBV
 
             try
             {
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-                MessageBox.Show("Xóa HSBA thành công!");
-                txtMaHSBAXoa.Text = "";
-                updateDSHSBA();
+                int i  = cmd1.ExecuteNonQuery();
+                int j = cmd2.ExecuteNonQuery();
+                if (i == 1 && j == 1)
+                {
+                    MessageBox.Show("Xóa HSBA thành công!");
+                    txtMaHSBAXoa.Text = "";
+                    updateDSHSBA();
+                }
+                else MessageBox.Show("Dữ liệu nhập vào không hợp lệ hoặc đã tồn tại.");
+               
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
