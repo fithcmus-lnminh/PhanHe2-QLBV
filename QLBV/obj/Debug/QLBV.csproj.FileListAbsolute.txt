@@ -48,3 +48,7 @@ D:\ATBMDL\PhanHe2\QLBV\QLBV\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\ATBMDL\PhanHe2\QLBV\QLBV\bin\Debug\System.ValueTuple.xml
 D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.csproj.CopyComplete
 D:\ATBMDL\PhanHe2\QLBV\QLBV\bin\Debug\App.config
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.GDS_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.GDCSYT_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.YBACSI_Main.resources
+D:\ATBMDL\PhanHe2\QLBV\QLBV\obj\Debug\QLBV.GDS_GDCSYT_YBS_XemTB.resources

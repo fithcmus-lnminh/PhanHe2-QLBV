@@ -34,7 +34,7 @@ namespace QLBV
                 return;
             }
 
-            string conString = "USER ID=" + txbUsername.Text + ";PASSWORD=" + txbPw.Text + ";DATA SOURCE=localhost:1521/XE";
+            string conString = "USER ID=" + txbUsername.Text + ";PASSWORD=" + txbPw.Text + ";DATA SOURCE=localhost:1521/OLS_THONGBAO";
             
             try
             {
@@ -86,6 +86,26 @@ namespace QLBV
                         Hide();
                         bn.ShowDialog();
                         Show();
+                        break;
+                    case "R_GDS":
+                        GDS_Main gds = new GDS_Main();
+                        Hide();
+                        gds.ShowDialog();
+                        Show();
+                        break;
+                    case "R_GDCSYT":
+                        GDCSYT_Main gdc = new GDCSYT_Main();
+                        Hide();
+                        gdc.ShowDialog();
+                        Show();
+                        break;
+                    case "R_YBS":
+                        YBACSI_Main ybsi = new YBACSI_Main();
+                        Hide();
+                        ybsi.ShowDialog();
+                        Show();
+                        break;
+                    default:
                         break;
                 }
             }

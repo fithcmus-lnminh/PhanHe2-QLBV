@@ -132,6 +132,24 @@
     <Compile Include="BN_Main.Designer.cs">
       <DependentUpon>BN_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="GDCSYT_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDCSYT_Main.Designer.cs">
+      <DependentUpon>GDCSYT_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDS_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDS_Main.Designer.cs">
+      <DependentUpon>GDS_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDS_GDCSYT_YBS_XemTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDS_GDCSYT_YBS_XemTB.Designer.cs">
+      <DependentUpon>GDS_GDCSYT_YBS_XemTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="NC_DVHSBA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +212,12 @@
     <Compile Include="ThanhTra_NV.Designer.cs">
       <DependentUpon>ThanhTra_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="YBACSI_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YBACSI_Main.Designer.cs">
+      <DependentUpon>YBACSI_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="YBS_HSBA_DVHSBA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +253,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BN_Main.resx">
       <DependentUpon>BN_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDCSYT_Main.resx">
+      <DependentUpon>GDCSYT_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDS_Main.resx">
+      <DependentUpon>GDS_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDS_GDCSYT_YBS_XemTB.resx">
+      <DependentUpon>GDS_GDCSYT_YBS_XemTB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NC_DVHSBA.resx">
       <DependentUpon>NC_DVHSBA.cs</DependentUpon>
@@ -268,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhTra_NV.resx">
       <DependentUpon>ThanhTra_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YBACSI_Main.resx">
+      <DependentUpon>YBACSI_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YBS_HSBA_DVHSBA.resx">
       <DependentUpon>YBS_HSBA_DVHSBA.cs</DependentUpon>
