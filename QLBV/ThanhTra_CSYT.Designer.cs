@@ -66,6 +66,7 @@
             this.btnTimCSYT.TabIndex = 33;
             this.btnTimCSYT.Text = "Tìm";
             this.btnTimCSYT.UseVisualStyleBackColor = true;
+            this.btnTimCSYT.Click += new System.EventHandler(this.btnTimCSYT_Click);
             // 
             // txbMaCSYT
             // 
@@ -98,6 +99,7 @@
             this.Name = "ThanhTra_CSYT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cơ sở y tế";
+            this.Load += new System.EventHandler(this.ThanhTra_CSYT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCSYT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

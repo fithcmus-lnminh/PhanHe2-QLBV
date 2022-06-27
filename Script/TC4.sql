@@ -1,0 +1,57 @@
+GRANT SELECT ON QLCSYT.HSBA TO R_YSI_BACSI;
+GRANT SELECT ON QLCSYT.HSBA_DV TO R_YSI_BACSI;
+GRANT SELECT ON QLCSYT.BENHNHAN TO R_YSI_BACSI;
+GRANT SELECT, UPDATE ON QLCSYT.NHANVIEN TO R_YSI_BACSI;
+
+
+-----------------  Tạo view hsba
+
+CREATE OR REPLACE VIEW YBACSI_HSBA AS
+SELECT HS.* 
+FROM NHANVIEN NV, HSBA HS
+WHERE NV.MANV = HS.MABS;
+
+GRANT SELECT ON QLCSYT.YBACSI_HSBA TO R_YSI_BACSI;
+
+
+-----------------  Tạo view hsba_dv
+
+CREATE OR REPLACE VIEW YBACSI_HSBA_DV AS
+SELECT HSDV.*
+FROM HSBA_DV HSDV, HSBA HS, NHANVIEN NV
+WHERE HSDV.MAHSBA = HS.MAHSBA AND NV.MANV = HS.MABS;
+
+GRANT SELECT ON QLCSYT.YBACSI_HSBA_DV TO R_YSI_BACSI;
+
+
+--- Tạo hàm để nhân viên chỉ xem, chỉnh sửa thông tin chính mình
+
+CREATE OR REPLACE FUNCTION TT_NV_FUNCTION
+(
+    p_schema VARCHAR2,
+    p_obj VARCHAR2 )
+    RETURN VARCHAR2
+AS
+    user VARCHAR2(100);
+BEGIN
+    user := SYS_CONTEXT('userenv', 'SESSION_USER');
+    
+    IF (user LIKE 'QLCSYT') THEN
+        user := '';
+    END IF;
+    
+    RETURN 'MANV LIKE ''%' || user || '''';
+END;
+/
+
+BEGIN
+DBMS_RLS.ADD_POLICY (
+    object_schema => 'QLCSYT',
+    object_name => 'NHANVIEN', 
+    policy_name => 'THONGTIN_NHANVIEN_POLICY', 
+    policy_function => 'TT_NV_FUNCTION',
+    statement_types => 'select, update',
+    update_check => TRUE
+    ); 
+END;
+/

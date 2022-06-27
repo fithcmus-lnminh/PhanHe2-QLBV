@@ -39,5 +39,20 @@ namespace QLBV
             }
             
         }
+
+        private void buttonTim_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM QLCSYT.HSBA WHERE MAHSBA LIKE '%" + txtMaHSBA.Text + "%'";
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            OracleDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvHSBA.DataSource = dt;
+            txtMaHSBA.Text = "";
+        }
     }
 }

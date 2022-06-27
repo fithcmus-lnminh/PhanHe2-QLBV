@@ -66,6 +66,7 @@
             this.btnTimBN.TabIndex = 33;
             this.btnTimBN.Text = "Tìm";
             this.btnTimBN.UseVisualStyleBackColor = true;
+            this.btnTimBN.Click += new System.EventHandler(this.btnTimBN_Click);
             // 
             // tbxMaBN
             // 
@@ -98,6 +99,7 @@
             this.Name = "ThanhTra_BN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin bệnh nhân";
+            this.Load += new System.EventHandler(this.ThanhTra_BN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTBN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

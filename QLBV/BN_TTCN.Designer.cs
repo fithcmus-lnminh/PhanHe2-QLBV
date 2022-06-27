@@ -30,6 +30,7 @@
         {
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbCSYT = new System.Windows.Forms.ComboBox();
             this.lblMaBN = new System.Windows.Forms.Label();
             this.txtTSBGD = new System.Windows.Forms.TextBox();
             this.txtDiUngThuoc = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             this.btnSuaTTCN = new System.Windows.Forms.Button();
             this.btnHuySuaTTCN = new System.Windows.Forms.Button();
             this.btnSuaTTCNAcp = new System.Windows.Forms.Button();
-            this.cbCSYT = new System.Windows.Forms.ComboBox();
+            this.txbMaBN = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +75,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txbMaBN);
             this.panel2.Controls.Add(this.cbCSYT);
             this.panel2.Controls.Add(this.lblMaBN);
             this.panel2.Controls.Add(this.txtTSBGD);
@@ -103,6 +105,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1016, 406);
             this.panel2.TabIndex = 23;
+            // 
+            // cbCSYT
+            // 
+            this.cbCSYT.Enabled = false;
+            this.cbCSYT.FormattingEnabled = true;
+            this.cbCSYT.Items.AddRange(new object[] {
+            "CS1",
+            "CS2",
+            "CS3",
+            "CS4",
+            "CS5",
+            "CS6",
+            "CS7",
+            "CS8",
+            "CS9",
+            "CS10"});
+            this.cbCSYT.Location = new System.Drawing.Point(135, 336);
+            this.cbCSYT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbCSYT.Name = "cbCSYT";
+            this.cbCSYT.Size = new System.Drawing.Size(313, 28);
+            this.cbCSYT.TabIndex = 28;
             // 
             // lblMaBN
             // 
@@ -351,26 +374,14 @@
             this.btnSuaTTCNAcp.Visible = false;
             this.btnSuaTTCNAcp.Click += new System.EventHandler(this.btnSuaTTCNAcp_Click);
             // 
-            // cbCSYT
+            // txbMaBN
             // 
-            this.cbCSYT.Enabled = false;
-            this.cbCSYT.FormattingEnabled = true;
-            this.cbCSYT.Items.AddRange(new object[] {
-            "CS1",
-            "CS2",
-            "CS3",
-            "CS4",
-            "CS5",
-            "CS6",
-            "CS7",
-            "CS8",
-            "CS9",
-            "CS10"});
-            this.cbCSYT.Location = new System.Drawing.Point(135, 336);
-            this.cbCSYT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbCSYT.Name = "cbCSYT";
-            this.cbCSYT.Size = new System.Drawing.Size(313, 28);
-            this.cbCSYT.TabIndex = 28;
+            this.txbMaBN.Location = new System.Drawing.Point(135, 22);
+            this.txbMaBN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbMaBN.Name = "txbMaBN";
+            this.txbMaBN.ReadOnly = true;
+            this.txbMaBN.Size = new System.Drawing.Size(313, 26);
+            this.txbMaBN.TabIndex = 29;
             // 
             // BN_TTCN
             // 
@@ -385,6 +396,7 @@
             this.Name = "BN_TTCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem thông tin cá nhân";
+            this.Load += new System.EventHandler(this.BN_TTCN_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -423,5 +435,6 @@
         private System.Windows.Forms.Button btnHuySuaTTCN;
         private System.Windows.Forms.Button btnSuaTTCNAcp;
         private System.Windows.Forms.ComboBox cbCSYT;
+        private System.Windows.Forms.TextBox txbMaBN;
     }
 }

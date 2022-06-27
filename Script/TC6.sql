@@ -1,5 +1,5 @@
 --View Table Nhan Vien
-create or replace function ViewNhanVien(P_Schema varchar2, P_Object varchar2)
+create or replace function nv_function(P_Schema varchar2, P_Object varchar2)
 return varchar2
 as
     usr varchar2(100);
@@ -26,14 +26,14 @@ begin
         object_schema => 'QLCSYT',
         object_name => 'NHANVIEN',
         policy_name => 'ViewNhanVien',
-        policy_function => 'ViewNhanVien',
+        policy_function => 'nv_function',
         statement_types => 'select, update',
         update_check => TRUE
     );
 end;
 
 --View Table Benh Nhan
-create or replace function ViewBenhNhan(P_Schema varchar2, P_Object varchar2)
+create or replace function bn_function(P_Schema varchar2, P_Object varchar2)
 return varchar2
 as
     usr varchar2(100);
@@ -60,7 +60,7 @@ begin
         object_schema => 'QLCSYT',
         object_name => 'BENHNHAN',
         policy_name => 'ViewBenhNhan',
-        policy_function => 'ViewBenhNhan',
+        policy_function => 'bn_function',
         statement_types => 'select, update',
         update_check => TRUE
     );

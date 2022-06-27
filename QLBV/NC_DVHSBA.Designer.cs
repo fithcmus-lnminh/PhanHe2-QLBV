@@ -51,12 +51,11 @@
             this.colNgay,
             this.colMaKTV,
             this.colKetQua});
-            this.dgDSHSBA_DV.Location = new System.Drawing.Point(22, 167);
-            this.dgDSHSBA_DV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgDSHSBA_DV.Location = new System.Drawing.Point(20, 134);
             this.dgDSHSBA_DV.Name = "dgDSHSBA_DV";
             this.dgDSHSBA_DV.RowHeadersWidth = 51;
             this.dgDSHSBA_DV.RowTemplate.Height = 24;
-            this.dgDSHSBA_DV.Size = new System.Drawing.Size(1245, 411);
+            this.dgDSHSBA_DV.Size = new System.Drawing.Size(1107, 329);
             this.dgDSHSBA_DV.TabIndex = 40;
             // 
             // colMaHSBADV
@@ -97,28 +96,27 @@
             // btnTim
             // 
             this.btnTim.BackColor = System.Drawing.Color.LightGray;
-            this.btnTim.Location = new System.Drawing.Point(1193, 101);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTim.Location = new System.Drawing.Point(1060, 81);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(84, 39);
+            this.btnTim.Size = new System.Drawing.Size(75, 31);
             this.btnTim.TabIndex = 39;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTimHSBA
             // 
-            this.txtTimHSBA.Location = new System.Drawing.Point(948, 107);
-            this.txtTimHSBA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimHSBA.Location = new System.Drawing.Point(843, 86);
             this.txtTimHSBA.Name = "txtTimHSBA";
-            this.txtTimHSBA.Size = new System.Drawing.Size(239, 26);
+            this.txtTimHSBA.Size = new System.Drawing.Size(213, 22);
             this.txtTimHSBA.TabIndex = 38;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(855, 113);
+            this.label1.Location = new System.Drawing.Point(760, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 37;
             this.label1.Text = "Tìm HSBA:";
             // 
@@ -127,25 +125,27 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label18.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label18.Location = new System.Drawing.Point(420, 32);
+            this.label18.Location = new System.Drawing.Point(373, 26);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(469, 43);
+            this.label18.Size = new System.Drawing.Size(391, 35);
             this.label18.TabIndex = 36;
             this.label18.Text = "DỊCH VỤ HỒ SƠ BỆNH ÁN";
             // 
             // NC_DVHSBA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 608);
+            this.ClientSize = new System.Drawing.Size(1147, 486);
             this.Controls.Add(this.dgDSHSBA_DV);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTimHSBA);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label18);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NC_DVHSBA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dịch vụ hồ sơ bệnh án";
+            this.Load += new System.EventHandler(this.NC_DVHSBA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHSBA_DV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

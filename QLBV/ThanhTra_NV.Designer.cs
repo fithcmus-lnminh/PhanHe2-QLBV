@@ -66,6 +66,7 @@
             this.btnTimNV.TabIndex = 34;
             this.btnTimNV.Text = "Tìm";
             this.btnTimNV.UseVisualStyleBackColor = true;
+            this.btnTimNV.Click += new System.EventHandler(this.btnTimNV_Click);
             // 
             // txbMaNV
             // 
@@ -98,6 +99,7 @@
             this.Name = "ThanhTra_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin Nhân viên";
+            this.Load += new System.EventHandler(this.ThanhTra_NV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

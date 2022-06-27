@@ -55,6 +55,7 @@
             this.buttonTim.TabIndex = 26;
             this.buttonTim.Text = "Tìm";
             this.buttonTim.UseVisualStyleBackColor = true;
+            this.buttonTim.Click += new System.EventHandler(this.buttonTim_Click);
             // 
             // txtMaHSBA
             // 
@@ -67,11 +68,11 @@
             // dgvHSBA
             // 
             this.dgvHSBA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHSBA.Location = new System.Drawing.Point(68, 132);
+            this.dgvHSBA.Location = new System.Drawing.Point(44, 132);
             this.dgvHSBA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvHSBA.Name = "dgvHSBA";
             this.dgvHSBA.RowHeadersWidth = 51;
-            this.dgvHSBA.Size = new System.Drawing.Size(915, 389);
+            this.dgvHSBA.Size = new System.Drawing.Size(965, 389);
             this.dgvHSBA.TabIndex = 24;
             // 
             // label18

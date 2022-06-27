@@ -66,6 +66,7 @@
             this.buttonTim.TabIndex = 32;
             this.buttonTim.Text = "Tìm";
             this.buttonTim.UseVisualStyleBackColor = true;
+            this.buttonTim.Click += new System.EventHandler(this.buttonTim_Click);
             // 
             // txbMaHSBA
             // 
@@ -78,11 +79,11 @@
             // dgvDVHSBA
             // 
             this.dgvDVHSBA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDVHSBA.Location = new System.Drawing.Point(62, 147);
+            this.dgvDVHSBA.Location = new System.Drawing.Point(39, 147);
             this.dgvDVHSBA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDVHSBA.Name = "dgvDVHSBA";
             this.dgvDVHSBA.RowHeadersWidth = 51;
-            this.dgvDVHSBA.Size = new System.Drawing.Size(915, 389);
+            this.dgvDVHSBA.Size = new System.Drawing.Size(966, 389);
             this.dgvDVHSBA.TabIndex = 30;
             // 
             // ThanhTra_DVHSBA
@@ -98,6 +99,7 @@
             this.Name = "ThanhTra_DVHSBA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dịch vụ hồ sơ bệnh án";
+            this.Load += new System.EventHandler(this.ThanhTra_DVHSBA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVHSBA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
