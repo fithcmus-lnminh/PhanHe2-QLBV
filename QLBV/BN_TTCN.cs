@@ -81,7 +81,53 @@ namespace QLBV
             btnSuaTTCN.Visible = true;
             btnSuaTTCNAcp.Visible = false;
             btnHuySuaTTCN.Visible = false;
+
+            if (txtTenBN.Text == "") { MessageBox.Show("Vui lòng nhập tên"); return; }
+            if (txtCMND.Text == "") { MessageBox.Show("Vui lòng CMND"); return; }
+
+
+            try
+            {
+                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var connectionStringsSection = (ConnectionStringsSection)config.GetSection("connectionStrings");
+                string conString = connectionStringsSection.ConnectionStrings["con"].ConnectionString;
+
+                OracleConnection con = new OracleConnection();
+                con.ConnectionString = conString;
+                con.Open();
+
+                string strSQL = "Update QLCSYT.BENHNHAN SET TENBN = N'" + txtTenBN.Text.ToString() +
+                    "', NGAYSINH = TO_DATE('" + dtpNgaySinh.Value.ToString("yyyy-MM-dd") + "','yyyy-mm-dd')" +
+                    ", CMND = '" + txtCMND.Text.ToString() +
+                    "', MACSYT = '" + cbCSYT.Text.ToString() +
+                    "', SONHA = '" + txtSoNha.Text +
+                    "', TENDUONG = '" + txtTenDuong.Text.ToString() +
+                     "', QUANHUYEN = '" + txtQH.Text.ToString() +
+                     "', TINHTP = '" + txtTinhTP.Text.ToString() +
+                      "', TIENSUBENH = '" + txtTSB.Text.ToString() +
+                      "', TIENSUBENHGD = '" + txtTSBGD.Text.ToString() +
+                      "', DIUNGTHUOC = '" + txtDiUngThuoc.Text.ToString() +
+                    "' WHERE MABN LIKE '" + txbMaBN.Text.ToString()  + "'";
+
+                MessageBox.Show(strSQL);
+
+                OracleCommand oCmd = new OracleCommand(strSQL, con);
+
+                oCmd.ExecuteNonQuery();
+
+                MessageBox.Show(txbMaBN.Text + " đã cập nhật thông tin cá nhân thành công", "Thành công",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                MessageBox.Show("Không thể cập nhật thông tin cá nhân do lỗi bên hệ thống", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
+    
 
         private void BN_TTCN_Load(object sender, EventArgs e)
         {

@@ -65,3 +65,6 @@ begin
         update_check => TRUE
     );
 end;
+
+grant select, update on qlcsyt.benhnhan to r_benhnhan;
+grant select, update on qlcsyt.nhanvien to r_nhanvien;
